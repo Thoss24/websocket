@@ -1,23 +1,24 @@
-import asyncio
- 
-import websockets
- 
-# create handler for each connection
- 
-async def handler(websocket, path):
- 
-    data = await websocket.recv()
- 
-    reply = f"Data recieved as:  {data}!"
- 
-    await websocket.send(reply)
- 
- 
- 
-start_server = websockets.serve(handler, "localhost", 8001)
- 
- 
- 
-asyncio.get_event_loop().run_until_complete(start_server)
- 
-asyncio.get_event_loop().run_forever()
+from flask import Flask, render_template
+from flask_socketio import SocketIO, emit
+
+app = Flask(__name__)
+socketio = SocketIO(app)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/creative')
+def creative():
+    return render_template('creative.html')
+
+@app.route('/answers')
+def answers():
+    return render_template('answers.html')
+
+@socketio.on('connect')
+def test_connect():
+    emit('after connect',  {'data':'Lets dance'})
+
+if __name__ == '__main__':
+    socketio.run(app)
