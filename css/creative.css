@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: blanchedalmond;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    border-bottom: 2px solid black;
+    min-height: 10vh;
+    min-width: 600px;
+    font-size: 24px;
+}
+
+#chart-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 90vh;
+    min-width: 600px;
+    gap: 20px;
+}
+
+.arc text {
+    font: 10px sans-serif;
+    text-anchor: middle;
+}
+  
+.arc path {
+    stroke: #fff;
+}
+
+.airline-charts {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#american-svg {
+
+}
+
+#delta-svg {
+
+}
+
+#southwest-svg {
+
+}
+
+#usAirways-svg {
+
+}
+
+#united-svg {
+
+}
+
+#virginAmerica-svg {
+
+}
