@@ -12,11 +12,10 @@
            var socket = io();
          
            socket.on('after connect', function(msg) {
-               console.log('After connect', msg);
+            //if (JSON.stringify(msg).length > 10000) return // here I have restricted payload size in bytes to prevent against large payload HTTP DDoS attacks
                $('#log').append('<br>' + $('<div/>').text('Received: ' + msg.data).html()); 
             }); 
-            
-            
+         
          });
       </script>
    </head>

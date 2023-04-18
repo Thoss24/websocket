@@ -1,4 +1,4 @@
-d3.csv("/Kaggle_TwitterUSAirlineSentiment.csv", function(error, data) {
+d3.csv("/static/data/Kaggle_TwitterUSAirlineSentiment.csv", function(error, data) {
     if (error) throw error;
   
     let american = {
@@ -314,3 +314,5 @@ d3.csv("/Kaggle_TwitterUSAirlineSentiment.csv", function(error, data) {
         .text(function(d) { return d.data.name });
 
 });
+
+console.log("test")
