@@ -313,6 +313,48 @@ d3.csv("/static/data/Kaggle_TwitterUSAirlineSentiment.csv", function(error, data
         .attr("dy", "0.35em")
         .text(function(d) { return d.data.name });
 
+    let americanText = []
+    let deltaText = []
+    let southwestText = []
+    let usAirwaysText = []
+    let unitedText = []
+    let virginAmericanText = []
+
+    for (let j = 0; j < data.length; j++) {
+      if (data[j]['text'].split(' ')[0].toLowerCase() === '@virginamerica') virginAmericanText.push(data[j]['text']);
+      if (data[j]['text'].split(' ')[0].toLowerCase() === '@jetblue') deltaText.push(data[j]['text']);
+      if (data[j]['text'].split(' ')[0].toLowerCase() === '@usairways') usAirwaysText.push(data[j]['text']);
+      if (data[j]['text'].split(' ')[0].toLowerCase() === '@united') unitedText.push(data[j]['text']);
+      if (data[j]['text'].split(' ')[0].toLowerCase() === '@southwestair') southwestText.push(data[j]['text']);
+      if (data[j]['text'].split(' ')[0].toLowerCase() === '@americanair') americanText.push(data[j]['text']);
+    };
+    
+    let americanTextContainer = document.getElementById('american-text');
+    for (let i = 0; i < americanText.length; i++) {
+      americanTextContainer.innerHTML += americanText[i] + '<br><br>'
+    };
+    let deltaTextContainer = document.getElementById('delta-text');
+    for (let i = 0; i < deltaText.length; i++) {
+      deltaTextContainer.innerHTML += deltaText[i] + '<br>'
+    };
+    let southwestTextContainer = document.getElementById('southwest-text');
+    for (let i = 0; i < southwestText.length; i++) {
+      southwestTextContainer.innerHTML += southwestText[i] + '<br>'
+    };
+    let usAirwaysTextContainer = document.getElementById('usairways-text');
+    for (let i = 0; i < usAirwaysText.length; i++) {
+      usAirwaysTextContainer.innerHTML += usAirwaysText[i] + '<br>'
+    };
+    let unitedTextContainer = document.getElementById('united-text');
+    for (let i = 0; i < unitedText.length; i++) {
+      unitedTextContainer.innerHTML += unitedText[i] + '<br>'
+    };
+    let virginTextContainer = document.getElementById('virgin-text');
+    for (let i = 0; i < virginAmericanText.length; i++) {
+      virginTextContainer.innerHTML += virginAmericanText[i] + '<br>'
+    };
+    console.log(americanTextContainer)
+    
 });
 
 console.log("test")

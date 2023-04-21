@@ -14,35 +14,90 @@
     <div class="airline-charts">
         <h2>American Airlines</h2>
         <svg id="american-svg" width="550" height="400"></svg>
+        <button class="toggle-text-button" id="american-button">Close text display</button>
+        <button class="open-text-display" id="open-american">Open text display</button>
+        <div id="american-text" class="text-container">
+        </div>
     </div>
 
     <div class="airline-charts">
         <h2>Delta Airlines</h2>
         <svg id="delta-svg" width="550" height="400"></svg>
+        <button class="toggle-text-button" id="delta-button">Close text display</button>
+        <button class="open-text-display" id="open-delta">Open text display</button>
+        <div id="delta-text" class="text-container">
+        </div>
     </div>
 
     <div class="airline-charts">
         <h2>SouthWest Airlines</h2>
         <svg id="southwest-svg" width="550" height="400"></svg>
+        <button class="toggle-text-button" id="southwest-button">Close text display</button>
+        <button class="open-text-display" id="open-southwest">Open text display</button>
+        <div id="southwest-text" class="text-container">
+        </div>
     </div>
 
     <div class="airline-charts">
         <h2>US Airways Airlines</h2>
         <svg id="usAirways-svg" width="550" height="400"></svg>
+        <button class="toggle-text-button" id="usairways-button">Close text display</button>
+        <button class="open-text-display" id="open-usairways">Open text display</button>
+        <div id="usairways-text" class="text-container">
+        </div>
     </div>
 
     <div class="airline-charts">
         <h2>United Airlines</h2>
         <svg id="united-svg" width="550" height="400"></svg>
+        <button class="toggle-text-button" id="united-button">Close text display</button>
+        <button class="open-text-display" id="open-united">Open text display</button>
+        <div id="united-text" class="text-container">
+        </div>
     </div>
 
     <div class="airline-charts">
         <h2>Virgin America Airlines</h2>
         <svg id="virginAmerica-svg" width="550" height="400"></svg>
+        <button class="toggle-text-button" id="virgin-button">Close text display</button>
+        <button class="open-text-display" id="open-virgin">Open text display</button>
+        <div id="virgin-text" class="text-container">
+        </div>
     </div>
 
     </div>
     
     <script type="text/javascript" src="../static/js/creative.js"></script>
+    <script>
+
+    let toggleTextButtons = document.querySelectorAll('.toggle-text-button');
+    let openTextDisplay = document.querySelectorAll('.open-text-display')
+
+    let americanTextContainer = document.getElementById('american-text');
+    let deltaTextContainer = document.getElementById('delta-text');
+    let southwestTextContainer = document.getElementById('southwest-text');
+    let usAirwaysTextContainer = document.getElementById('usairways-text');
+    let unitedTextContainer = document.getElementById('united-text');
+    let virginTextContainer = document.getElementById('virgin-text');
+    
+    toggleTextButtons.forEach((button) => button.addEventListener('click', () => {
+        if (button.id === 'american-button') americanTextContainer.style.display = 'none';
+        if (button.id === 'delta-button') deltaTextContainer.style.display = 'none';
+        if (button.id === 'southwest-button') southwestTextContainer.style.display = 'none';
+        if (button.id === 'usairways-button') usAirwaysTextContainer.style.display = 'none';
+        if (button.id === 'united-button') unitedTextContainer.style.display = 'none';
+        if (button.id === 'virgin-button') virginTextContainer.style.display = 'none';
+    }));
+
+    openTextDisplay.forEach((button) => button.addEventListener('click', () => {
+        if (button.id === 'open-american') americanTextContainer.style.display = 'flex';
+        if (button.id === 'open-delta') deltaTextContainer.style.display = 'flex';
+        if (button.id === 'open-southwest') southwestTextContainer.style.display = 'flex';
+        if (button.id === 'open-usairways') usAirwaysTextContainer.style.display = 'flex';
+        if (button.id === 'open-united') unitedTextContainer.style.display = 'flex';
+        if (button.id === 'open-virgin') virginTextContainer.style.display = 'flex';
+    }));
+
+    </script>
 </body>
 </html> 

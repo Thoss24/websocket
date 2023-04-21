@@ -46,26 +46,24 @@ header {
     align-items: center;
 }
 
-#american-svg {
-
+.text-container {
+    display: none;
+    flex-direction: column;
+    width: 60%;
+    font-size: 14px;
 }
 
-#delta-svg {
-
+.toggle-text-button {
+    padding: 6px;
+    border-radius: 8px;
+    margin: 12px;
 }
 
-#southwest-svg {
-
+.open-text-display {
+    padding: 6px;
+    border-radius: 8px;
+    margin: 12px;
 }
 
-#usAirways-svg {
 
-}
 
-#united-svg {
-
-}
-
-#virginAmerica-svg {
-
-}
