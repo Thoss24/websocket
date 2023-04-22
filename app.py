@@ -6,7 +6,7 @@ app = Flask(__name__)
 socketio = SocketIO(app)
 
 @app.route('/')
-#@cross_origin(origins='http://localhost:5000') # CORS protects against the scenario where a malicious site tricks an unmodified browser to make a cross site-request to a legitimate site
+@cross_origin(origins='http://localhost:5000') # CORS protects against the scenario where a malicious site tricks an unmodified browser to make a cross site-request to a legitimate site
 def index():
     return render_template('index.html')
 

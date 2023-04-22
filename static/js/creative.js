@@ -335,23 +335,23 @@ d3.csv("/static/data/Kaggle_TwitterUSAirlineSentiment.csv", function(error, data
     };
     let deltaTextContainer = document.getElementById('delta-text');
     for (let i = 0; i < deltaText.length; i++) {
-      deltaTextContainer.innerHTML += deltaText[i] + '<br>'
+      deltaTextContainer.innerHTML += deltaText[i] + '<br><br>'
     };
     let southwestTextContainer = document.getElementById('southwest-text');
     for (let i = 0; i < southwestText.length; i++) {
-      southwestTextContainer.innerHTML += southwestText[i] + '<br>'
+      southwestTextContainer.innerHTML += southwestText[i] + '<br><br>'
     };
     let usAirwaysTextContainer = document.getElementById('usairways-text');
     for (let i = 0; i < usAirwaysText.length; i++) {
-      usAirwaysTextContainer.innerHTML += usAirwaysText[i] + '<br>'
+      usAirwaysTextContainer.innerHTML += usAirwaysText[i] + '<br><br>'
     };
     let unitedTextContainer = document.getElementById('united-text');
     for (let i = 0; i < unitedText.length; i++) {
-      unitedTextContainer.innerHTML += unitedText[i] + '<br>'
+      unitedTextContainer.innerHTML += unitedText[i] + '<br><br>'
     };
     let virginTextContainer = document.getElementById('virgin-text');
     for (let i = 0; i < virginAmericanText.length; i++) {
-      virginTextContainer.innerHTML += virginAmericanText[i] + '<br>'
+      virginTextContainer.innerHTML += virginAmericanText[i] + '<br><br>'
     };
     console.log(americanTextContainer)
     
