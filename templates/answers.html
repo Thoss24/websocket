@@ -21,12 +21,24 @@
 
       <div class="answers-shell">
         <h2>Question 2.2</h2>
-        <p></p>
+        <p>There are a number of security issues with webSockets, such as no authentication during the handshake process, un-encrypted TCP channels which can result in sensitive data exposure, vulnerability to input data attacks which can greatly
+          damage a website, and many others. I have chosen to focus on using a restricted payload size by limiting the size of the data which can be sent over the websocket. My reason for doing this is to prevent large payload 
+          HTTP DDoS attacks, as having a reduced payload size directly minimizes the possibility of large packets of data being sent over the websocket, such as large malware attacks. My send security feature was to enable CORS, which helps
+          to protect against unwanted domains accessing the server. CORS explicity states which domains are allowed access and blocks calls from domains which haven't been given access, lets say an unwanted domain tried to access the server and attack
+          our server, CORS would prevent this from happening. This makes our server more secure because we have more control over
+          who can access it, in addition to the payload limiting, I feel that these two security measures provide a good level of security for a websocket application.</p>
       </div>
 
       <div class="answers-shell">
         <h2>Question 2.3</h2>
-        <p></p>
+        <p> I found the process of getting the websocket connection to work properly challenging, especially when I tried to use Heroku, as I needed a paid account to host my application on their servers, so ultimately decided to 
+          create the server on my local machine. I also found it challenging to implement the websocket with flask initially, as I kept encountering errors relating to the server connection and or hosting the html files from
+          app.py. Once I got everything working together, the next challenge was to come up with another visualization, which I felt complemented the pie charts I had previously made. I ultimately decided to use the recent tweets data,
+          as I felt this provided some useful context for my pie chart visualization. I also had difficulty decided which security features to use for the websocket, I felt that I needed some more time to explore this part of the project
+          because there were many different ways to implement security features, perhaps if this aspect of the assignment was introduced earlier in the module, it would have enabled me to develop a stronger understanding of websocket security.
+          When I work with websockets again, I will certainly spend more time to try to understand websocket security and ensure that aspect is stronger than it is here in this project. I would also like to spend more time with socketIO and 
+          the functionality it can provide to a websocket application. In addition to this, I would also like to improve with the d3.js library, as it seems to be a very powerful visualization tool which I have only really scratched the surface of.
+        </p>
       </div>
     </div>
   </body>
